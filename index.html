@@ -45,13 +45,22 @@
       transform: translateY(0);
     }
 
-    .gallery img {
-      width: 200px;
-      height: auto;
-      border-radius: 10px;
-      margin: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 200px;
+  max-width: 90vw; /* Mobilde ekranın %90'ını geçmesin */
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
 
     .note {
       padding: 20px;
