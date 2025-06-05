@@ -1,44 +1,116 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Senin İçin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senin İçin Hande</title>
   <style>
     body {
-      background: #fff0f5;
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 50px;
+      background: #fffafc;
+      scroll-behavior: smooth;
     }
-    h1 {
-      color: #c71585;
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
-    .counter {
+
+    svg {
+      width: 200px;
+      height: 200px;
+      animation: grow 3s ease-in-out forwards;
+    }
+
+    @keyframes grow {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .message {
       font-size: 24px;
-      margin-top: 20px;
+      text-align: center;
+      margin: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease-in-out;
     }
-    .heart {
-      font-size: 50px;
-      animation: beat 1s infinite;
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
     }
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .note {
+      padding: 20px;
+      font-size: 18px;
+      background: #ffe4ec;
+      border-radius: 10px;
+      margin: 40px;
+      max-width: 500px;
     }
   </style>
 </head>
 <body>
-  <h1>🌸 Merhaba Aşkım 🌸</h1>
-  <p class="counter">Seninle <span id="days">0</span> gündür birlikteyiz 💖</p>
-  <div class="heart">❤️</div>
+
+  <!-- Çiçek Bölümü -->
+  <section>
+    <!-- Basit bir SVG çiçek -->
+    <svg viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="10" fill="#FF69B4"/>
+      <path d="M32 12 C30 2, 40 2, 38 12" stroke="#FF69B4" stroke-width="2" fill="none"/>
+      <path d="M52 32 C62 30, 62 40, 52 38" stroke="#FF69B4" stroke-width="2" fill="none"/>
+      <path d="M32 52 C34 62, 24 62, 26 52" stroke="#FF69B4" stroke-width="2" fill="none"/>
+      <path d="M12 32 C2 34, 2 24, 12 26" stroke="#FF69B4" stroke-width="2" fill="none"/>
+    </svg>
+    <a href="#mesaj"><p style="margin-top: 40px; color: #ff1493;">🌸 Aşağı Kaydır 🌸</p></a>
+  </section>
+
+  <!-- Mesaj Bölümü -->
+  <section id="mesaj">
+    <div class="message" id="girisMesaji">Merhaba Hande, bu site sadece senin için..</div>
+  </section>
+
+  <!-- Fotoğraf Galerisi -->
+  <section>
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Anı 1">
+      <img src="foto2.jpg" alt="Anı 2">
+      <img src="foto3.jpg" alt="Anı 3">
+    </div>
+  </section>
+
+  <!-- Not Bölümü -->
+  <section>
+    <div class="note">
+      Hande, seni tanımak hayatımda en güzel şeylerden biri oldu.  
+      Bu sayfayı senin için yaptım çünkü duygularımı başka türlü anlatmak zor geldi.  
+      Umarım beğenmişsindir... Benimle olur musun? 💖
+    </div>
+  </section>
 
   <script>
-    const startDate = new Date("2023-11-12"); // Tanışma tarihi örneği
-    const now = new Date();
-    const diffTime = Math.abs(now - startDate);
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-    document.getElementById("days").textContent = diffDays;
+    // Scroll ile yazıyı göster
+    window.addEventListener('scroll', () => {
+      const mesaj = document.getElementById('girisMesaji');
+      const rect = mesaj.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        mesaj.classList.add('show');
+      }
+    });
   </script>
+
 </body>
 </html>
