@@ -1,34 +1,44 @@
-<html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senin İçin</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #c71585;
+    }
+    .counter {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    .heart {
+      font-size: 50px;
+      animation: beat 1s infinite;
+    }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Merhaba Aşkım 🌸</h1>
+  <p class="counter">Seninle <span id="days">0</span> gündür birlikteyiz 💖</p>
+  <div class="heart">❤️</div>
 
-<meta charset="utf-8"> 
-<body style="background-color:powderpink;">
-
-
-<table border="3">
-      <tr>
-         <td colspan="2"><font size=+3><b>Mert Ersevinç Web Sitesi</b></font></td>
-      </tr>
-     <tr>
-         <td rowspan="1"><font size=+2>İsim: Mert<br>Soyad: Ersevinç<br>Doğum Tarihi: 18.02.2003 <br><br><br> </td>
-         <td><img src="https://github.com/mertersevinc/mertersevinc.github.io/blob/main/asdf.jpg?raw=true" alt="Resim"/></td>
-      </tr>
-      <tr>
-         <td colspan ="2"><font size=+1>18 Şubat 2003 tarihinde İzmir'in Konak ilçesinde doğdum. </td>
-      </tr>
-		 <tr>
-         <td colspan ="2"><font size=+1>Manisa'nın Salihli ilçesinde İlköğretim ve Ortaöğretimimi tamamladım.</td>
-      </tr>
- <tr>
-         <td colspan ="2"><font size=+1>Fahriye Hanim İlkokulu,Milli Egemenlik Ortaokulu ve Salihli Anadolu Lisesinde eğitim gördüm.</td>
-      </tr>
-		 <tr>
-         <td colspan ="2"><font size=+1>HTML ve C de başlangıç ve orta düzeyi seviyedeyim.</td>
-      </tr>
-	<tr>
-         <td colspan ="2"><font size=+1>2022 YKS sınavında 158.032'lik dereceyle yerleştim. </td>
-      </tr>
- <tr>
-         <td colspan ="2"><font size=+1>Kahramanmaraş Sütçü İmam Üniversitesinde Bilgisayar Mühendisliği 1.Sınıf öğrencisiyim.</td>
-      </tr>
-   </table>
+  <script>
+    const startDate = new Date("2023-11-12"); // Tanışma tarihi örneği
+    const now = new Date();
+    const diffTime = Math.abs(now - startDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("days").textContent = diffDays;
+  </script>
+</body>
 </html>
