@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senin İçin :)</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Senin İçin Hande'm</title>
   <style>
     body {
       margin: 0;
@@ -35,7 +35,7 @@
     .message {
       font-size: 24px;
       text-align: center;
-      margin: 30px;
+      margin: 20px;
       opacity: 0;
       transform: translateY(20px);
       transition: all 1s ease-in-out;
@@ -50,7 +50,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 10px;
+      padding: 5px;
     }
 
     .gallery img {
@@ -70,9 +70,8 @@
 
       .note {
         font-size: 16px;
-        margin: 20px auto 30px;
+        margin: 20px;
         padding: 15px;
-        text-align: center;
       }
 
       section {
@@ -85,43 +84,81 @@
       font-size: 18px;
       background: #ffe4ec;
       border-radius: 10px;
-      margin: 40px;
+      margin: 20px auto 30px;
       max-width: 500px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-<!-- Çiçek Bölümü -->
-<section>
-  <!-- SVG ile saplı papatya -->
-  <svg viewBox="0 0 200 250">
-    <!-- Sarı merkez -->
-    <circle cx="100" cy="100" r="20" fill="#FFD700"/>
+  <!-- 🌸 Çiçek Bölümü -->
+  <section>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="petalGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffe6ef"/>
+          <stop offset="100%" stop-color="#ff91b3"/>
+        </radialGradient>
+        <radialGradient id="centerGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff4a3"/>
+          <stop offset="100%" stop-color="#ffcc00"/>
+        </radialGradient>
+      </defs>
 
-    <!-- Yapraklar -->
-    <g fill="white" stroke="#ccc" stroke-width="1">
-      <ellipse cx="100" cy="50" rx="15" ry="30" />
-      <ellipse cx="100" cy="150" rx="15" ry="30" />
-      <ellipse cx="50" cy="100" rx="30" ry="15" />
-      <ellipse cx="150" cy="100" rx="30" ry="15" />
-      <ellipse cx="70" cy="70" rx="25" ry="12" transform="rotate(-45 100 100)"/>
-      <ellipse cx="130" cy="130" rx="25" ry="12" transform="rotate(-45 100 100)"/>
-      <ellipse cx="130" cy="70" rx="25" ry="12" transform="rotate(45 100 100)"/>
-      <ellipse cx="70" cy="130" rx="25" ry="12" transform="rotate(45 100 100)"/>
-    </g>
+      <!-- Yapraklar -->
+      <g stroke="#ff6f91" stroke-width="2" fill="url(#petalGradient)">
+        <path d="M100,40 
+                 C90,20 70,20 75,40 
+                 C60,50 70,70 100,70 
+                 C130,70 140,50 125,40 
+                 C130,20 110,20 100,40Z"/>
 
-    <!-- Sap (gövde) -->
-    <line x1="100" y1="120" x2="100" y2="230" stroke="#228B22" stroke-width="6" stroke-linecap="round"/>
-  </svg>
+        <path d="M100,40 
+                 C90,20 70,20 75,40 
+                 C60,50 70,70 100,70 
+                 C130,70 140,50 125,40 
+                 C130,20 110,20 100,40Z"
+              transform="rotate(72 100 100)"/>
 
-  <a href="#mesaj"><p style="margin-top: 40px; color: #ff1493;">🌸 Aşağı Kaydır 🌸</p></a>
-</section>
+        <path d="M100,40 
+                 C90,20 70,20 75,40 
+                 C60,50 70,70 100,70 
+                 C130,70 140,50 125,40 
+                 C130,20 110,20 100,40Z"
+              transform="rotate(144 100 100)"/>
 
+        <path d="M100,40 
+                 C90,20 70,20 75,40 
+                 C60,50 70,70 100,70 
+                 C130,70 140,50 125,40 
+                 C130,20 110,20 100,40Z"
+              transform="rotate(216 100 100)"/>
+
+        <path d="M100,40 
+                 C90,20 70,20 75,40 
+                 C60,50 70,70 100,70 
+                 C130,70 140,50 125,40 
+                 C130,20 110,20 100,40Z"
+              transform="rotate(288 100 100)"/>
+      </g>
+
+      <!-- Orta Nokta -->
+      <circle cx="100" cy="100" r="12" fill="url(#centerGradient)" stroke="#e39800" stroke-width="2"/>
+
+      <!-- Polen noktacıkları -->
+      <circle cx="100" cy="85" r="2" fill="#ff69b4"/>
+      <circle cx="90" cy="95" r="2" fill="#ff69b4"/>
+      <circle cx="110" cy="95" r="2" fill="#ff69b4"/>
+      <circle cx="95" cy="110" r="2" fill="#ff69b4"/>
+      <circle cx="105" cy="110" r="2" fill="#ff69b4"/>
+    </svg>
+    <a href="#mesaj"><p style="margin-top: 20px; color: #ff1493;">🌸 Aşağı Kaydır 🌸</p></a>
+  </section>
 
   <!-- Mesaj Bölümü -->
   <section id="mesaj">
-    <div class="message" id="girisMesaji">Merhaba Hande, Bu site senin için tasarlandı. Umarım beğenirsin :)</div>
+    <div class="message" id="girisMesaji">Merhaba Hande, bu site sadece senin için..</div>
   </section>
 
   <!-- Fotoğraf Galerisi -->
@@ -131,7 +168,9 @@
       <img src="foto2.jpg" alt="Anı 2">
       <img src="foto3.jpg" alt="Anı 3">
       <img src="foto4.jpg" alt="Anı 4">
+      <img src="foto5.jpg" alt="Anı 5">
       <img src="foto6.jpg" alt="Anı 6">
+      <img src="foto7.jpg" alt="Anı 7">
       <img src="foto8.jpg" alt="Anı 8">
     </div>
   </section>
@@ -139,11 +178,16 @@
   <!-- Not Bölümü -->
   <section>
     <div class="note">
-      Seninle tanışmak için günlerdir ne yapabilirim diye düşünüyordum ve sanırım yapabileceğim en tuhaf şeyi yapmayı tercih ettim :) 
-      Kafede gördüğüm gün seni bir anlığına çok mutlu olmuştum sonra yanında birini görünce aynı şekilde modum çok düşmüştü ama yine de içimdekileri sana en kolay böyle anlatabilirdim sanırım.
-      Tanışmak ve konuşmak istersen buna can attığımı bilmeni isterim umarım kabul edersin :)
+      Seninle tanışmak için günlerdir ne yapabilirim diye düşünüyordum  <br/>
+      ve sanırım yapabileceğim en tuhaf şeyi yapmayı tercih ettim :)  <br/>
+      Kafede gördüğüm gün seni bir anlığına çok mutlu olmuştum  <br/>
+      sonra yanında birini görünce yeni şekilde modum çok düşmüştü  <br/>
+      ama yine de içimdekileri sana en kolay böyle anlatabilirdim sanırım.  <br/>
+      Tanışmak ve konuşmak istersen buna can attığımı bilmeni isterim  <br/>
+      umarım kabul edersin 💖
     </div>
   </section>
+
   <script>
     // Scroll ile yazıyı göster
     window.addEventListener('scroll', () => {
