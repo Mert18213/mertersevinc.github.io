@@ -5,23 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Senin İçin Hande'm</title>
   <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffe6f0; /* tatlı pembe */
-  scroll-behavior: smooth;
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffe6f0;
+      scroll-behavior: smooth;
+    }
 
-
-section {
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
+    section {
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
 
     svg {
       width: 200px;
@@ -48,38 +46,38 @@ section {
       transform: translateY(0);
     }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
-}
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+    }
 
-.gallery img {
-  width: 200px;
-  max-width: 90vw; /* Mobilde ekranın %90'ını geçmesin */
-  height: auto;
-  border-radius: 10px;
-  margin: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
+    .gallery img {
+      width: 200px;
+      max-width: 90vw;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
 
-@media (max-width: 600px) {
-  .message {
-    font-size: 18px;
-    margin: 20px;
-  }
+    @media (max-width: 600px) {
+      .message {
+        font-size: 18px;
+        margin: 20px;
+      }
 
-  .note {
-    font-size: 16px;
-    margin: 20px;
-    padding: 15px;
-  }
+      .note {
+        font-size: 16px;
+        margin: 20px;
+        padding: 15px;
+      }
 
-  section {
-    padding: 20px 10px;
-  }
-}
+      section {
+        padding: 20px 10px;
+      }
+    }
 
     .note {
       padding: 20px;
@@ -95,13 +93,21 @@ section {
 
   <!-- Çiçek Bölümü -->
   <section>
-    <!-- Basit bir SVG çiçek -->
-    <svg viewBox="0 0 64 64" fill="none">
-      <circle cx="32" cy="32" r="10" fill="#FF69B4"/>
-      <path d="M32 12 C30 2, 40 2, 38 12" stroke="#FF69B4" stroke-width="2" fill="none"/>
-      <path d="M52 32 C62 30, 62 40, 52 38" stroke="#FF69B4" stroke-width="2" fill="none"/>
-      <path d="M32 52 C34 62, 24 62, 26 52" stroke="#FF69B4" stroke-width="2" fill="none"/>
-      <path d="M12 32 C2 34, 2 24, 12 26" stroke="#FF69B4" stroke-width="2" fill="none"/>
+    <!-- SVG ile papatya çiçeği -->
+    <svg viewBox="0 0 200 200">
+      <!-- Sarı merkez -->
+      <circle cx="100" cy="100" r="20" fill="#FFD700"/>
+      <!-- Yapraklar -->
+      <g fill="white" stroke="#ccc" stroke-width="1">
+        <ellipse cx="100" cy="50" rx="15" ry="30" />
+        <ellipse cx="100" cy="150" rx="15" ry="30" />
+        <ellipse cx="50" cy="100" rx="30" ry="15" />
+        <ellipse cx="150" cy="100" rx="30" ry="15" />
+        <ellipse cx="70" cy="70" rx="25" ry="12" transform="rotate(-45 100 100)"/>
+        <ellipse cx="130" cy="130" rx="25" ry="12" transform="rotate(-45 100 100)"/>
+        <ellipse cx="130" cy="70" rx="25" ry="12" transform="rotate(45 100 100)"/>
+        <ellipse cx="70" cy="130" rx="25" ry="12" transform="rotate(45 100 100)"/>
+      </g>
     </svg>
     <a href="#mesaj"><p style="margin-top: 40px; color: #ff1493;">🌸 Aşağı Kaydır 🌸</p></a>
   </section>
@@ -111,20 +117,19 @@ section {
     <div class="message" id="girisMesaji">Merhaba Hande, bu site sadece senin için..</div>
   </section>
 
-<!-- Fotoğraf Galerisi -->
-<section>
-  <div class="gallery">
-    <img src="foto1.jpg" alt="Anı 1">
-    <img src="foto2.jpg" alt="Anı 2">
-    <img src="foto3.jpg" alt="Anı 3">
-    <img src="foto4.jpg" alt="Anı 4">
-    <img src="foto5.jpg" alt="Anı 5">
-    <img src="foto6.jpg" alt="Anı 6">
-    <img src="foto7.jpg" alt="Anı 7">
-    <img src="foto8.jpg" alt="Anı 8">
-  </div>
-</section>
-
+  <!-- Fotoğraf Galerisi -->
+  <section>
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Anı 1">
+      <img src="foto2.jpg" alt="Anı 2">
+      <img src="foto3.jpg" alt="Anı 3">
+      <img src="foto4.jpg" alt="Anı 4">
+      <img src="foto5.jpg" alt="Anı 5">
+      <img src="foto6.jpg" alt="Anı 6">
+      <img src="foto7.jpg" alt="Anı 7">
+      <img src="foto8.jpg" alt="Anı 8">
+    </div>
+  </section>
 
   <!-- Not Bölümü -->
   <section>
