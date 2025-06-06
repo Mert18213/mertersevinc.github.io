@@ -91,26 +91,32 @@
 </head>
 <body>
 
-  <!-- Çiçek Bölümü -->
-  <section>
-    <!-- SVG ile papatya çiçeği -->
-    <svg viewBox="0 0 200 200">
-      <!-- Sarı merkez -->
-      <circle cx="100" cy="100" r="20" fill="#FFD700"/>
-      <!-- Yapraklar -->
-      <g fill="white" stroke="#ccc" stroke-width="1">
-        <ellipse cx="100" cy="50" rx="15" ry="30" />
-        <ellipse cx="100" cy="150" rx="15" ry="30" />
-        <ellipse cx="50" cy="100" rx="30" ry="15" />
-        <ellipse cx="150" cy="100" rx="30" ry="15" />
-        <ellipse cx="70" cy="70" rx="25" ry="12" transform="rotate(-45 100 100)"/>
-        <ellipse cx="130" cy="130" rx="25" ry="12" transform="rotate(-45 100 100)"/>
-        <ellipse cx="130" cy="70" rx="25" ry="12" transform="rotate(45 100 100)"/>
-        <ellipse cx="70" cy="130" rx="25" ry="12" transform="rotate(45 100 100)"/>
-      </g>
-    </svg>
-    <a href="#mesaj"><p style="margin-top: 40px; color: #ff1493;">🌸 Aşağı Kaydır 🌸</p></a>
-  </section>
+<!-- Çiçek Bölümü -->
+<section>
+  <!-- SVG ile saplı papatya -->
+  <svg viewBox="0 0 200 250">
+    <!-- Sarı merkez -->
+    <circle cx="100" cy="100" r="20" fill="#FFD700"/>
+
+    <!-- Yapraklar -->
+    <g fill="white" stroke="#ccc" stroke-width="1">
+      <ellipse cx="100" cy="50" rx="15" ry="30" />
+      <ellipse cx="100" cy="150" rx="15" ry="30" />
+      <ellipse cx="50" cy="100" rx="30" ry="15" />
+      <ellipse cx="150" cy="100" rx="30" ry="15" />
+      <ellipse cx="70" cy="70" rx="25" ry="12" transform="rotate(-45 100 100)"/>
+      <ellipse cx="130" cy="130" rx="25" ry="12" transform="rotate(-45 100 100)"/>
+      <ellipse cx="130" cy="70" rx="25" ry="12" transform="rotate(45 100 100)"/>
+      <ellipse cx="70" cy="130" rx="25" ry="12" transform="rotate(45 100 100)"/>
+    </g>
+
+    <!-- Sap (gövde) -->
+    <line x1="100" y1="120" x2="100" y2="230" stroke="#228B22" stroke-width="6" stroke-linecap="round"/>
+  </svg>
+
+  <a href="#mesaj"><p style="margin-top: 40px; color: #ff1493;">🌸 Aşağı Kaydır 🌸</p></a>
+</section>
+
 
   <!-- Mesaj Bölümü -->
   <section id="mesaj">
